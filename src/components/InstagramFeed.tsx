@@ -50,13 +50,10 @@ const InstagramFeed = () => {
       <div className="max-w-7xl mx-auto section-padding">
         <div className="text-center mb-12 animate-fade-in">
           <span className="text-coral-500 font-semibold text-sm uppercase tracking-wide">Follow the Journey</span>
-          <h2 className="text-3xl lg:text-5xl font-playfair font-bold mt-2 mb-6">
+          <h2 className="text-3xl lg:text-5xl font-dm-sans font-bold mt-2 mb-6">
             Daily <span className="gradient-text">Motivation</span>
             <br />& Success Stories
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Get daily inspiration, workout tips, and see real <span className="font-semibold text-coral-600">transformation stories</span> on Instagram
-          </p>
           
           <a 
             href="https://www.instagram.com/abhiramnair" 
@@ -69,22 +66,22 @@ const InstagramFeed = () => {
           </a>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {posts.map((post, index) => (
             <div 
               key={post.id}
-              className="relative group cursor-pointer overflow-hidden rounded-xl shadow-lg hover-lift animate-scale-in"
+              className="relative group cursor-pointer overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <img 
                 src={post.image}
                 alt={`Instagram post ${post.id}`}
-                className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4 right-4 text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="absolute bottom-4 left-4 right-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <div className="flex items-center justify-between text-xs mb-2">
                     <div className="flex items-center gap-2">
                       <span>❤️ {post.likes}</span>
@@ -96,35 +93,6 @@ const InstagramFeed = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Instagram CTA */}
-        <div className="bg-gradient-to-r from-pink-50 via-purple-50 to-indigo-50 rounded-2xl p-8 text-center animate-fade-in">
-          <div className="max-w-2xl mx-auto">
-            <h3 className="text-2xl font-playfair font-bold mb-4">
-              Join 50K+ Followers Getting Daily Fitness Tips
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Behind-the-scenes content, exclusive workout videos, nutrition tips, and real-time transformation updates
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://www.instagram.com/abhiramnair" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
-              >
-                Follow on Instagram
-              </a>
-              <button 
-                onClick={() => document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-purple-500 text-purple-600 hover:bg-purple-500 hover:text-white px-6 py-3 rounded-full font-semibold transition-all duration-300"
-              >
-                Start Your Journey
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </section>

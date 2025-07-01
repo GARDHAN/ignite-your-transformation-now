@@ -36,7 +36,7 @@ const WhatYouGetSection = () => {
         </div>
 
         {/* Infinite Sliding Text Animation */}
-        <div className="relative mb-16 overflow-hidden">
+        <div className="relative overflow-hidden">
           <div className="flex animate-slide-infinite">
             {/* First set of features */}
             {features.map((feature, index) => (
@@ -65,18 +65,6 @@ const WhatYouGetSection = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Static Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.slice(0, 8).map((feature, index) => (
-            <div key={index} className="text-center space-y-4 bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-fade-in">
-              <div className="text-3xl mb-3">✨</div>
-              <p className="font-dm-sans font-bold text-soft-gray">
-                {feature}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
     </section>
