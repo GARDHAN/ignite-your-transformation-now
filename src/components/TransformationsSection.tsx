@@ -10,7 +10,7 @@ const TransformationsSection = () => {
       age: 28,
       location: "Mumbai",
       beforeImg: "/lovable-uploads/93ad2042-2e83-421e-9776-0a66831583ce.png",
-      afterImg: "/lovable-uploads/ced87b72-309f-4106-b636-e62f465c9710.png",
+      afterImg: "/lovable-uploads/326ee1ad-0478-425b-a3ea-5bbc94c629cd.png",
       results: "Lost 15kg, Gained Muscle",
       timeframe: "4 months",
       testimonial: "The personalized approach completely transformed my body and confidence. Best investment ever!",
@@ -20,18 +20,56 @@ const TransformationsSection = () => {
       age: 32,
       location: "Delhi", 
       beforeImg: "/lovable-uploads/bc4beba6-36d0-4426-9c3a-5b2c5eb270c9.png",
-      afterImg: "/lovable-uploads/c4f56d01-83f8-4c7a-a802-a3a8a12651c3.png",
+      afterImg: "/lovable-uploads/ff997e0e-dbd0-4fbb-8282-c403c9a1ebb5.png",
       results: "Toned Body, +10kg Strength",
       timeframe: "3 months",
       testimonial: "The guidance was game-changing. I finally found a sustainable approach to fitness!",
+    },
+    {
+      name: "Arjun K.",
+      age: 25,
+      location: "Bangalore",
+      beforeImg: "/lovable-uploads/ced87b72-309f-4106-b636-e62f465c9710.png",
+      afterImg: "/lovable-uploads/06d11a55-82ca-4851-9fa2-88213d67ed1d.png",
+      results: "Shredded 20kg, Built Lean Muscle",
+      timeframe: "5 months",
+      testimonial: "Abhiram's coaching style is perfect. He made fitness enjoyable and sustainable for me!",
+    },
+    {
+      name: "Sneha R.",
+      age: 29,
+      location: "Pune",
+      beforeImg: "/lovable-uploads/c4f56d01-83f8-4c7a-a802-a3a8a12651c3.png",
+      afterImg: "/lovable-uploads/f571165a-b1c5-41f3-b1dc-a1f46f72840a.png",
+      results: "Fat Loss + Strength Gains",
+      timeframe: "6 months",
+      testimonial: "Amazing transformation journey! The meal plans and workouts were perfectly tailored.",
+    },
+    {
+      name: "Vikram D.",
+      age: 34,
+      location: "Chennai",
+      beforeImg: "/lovable-uploads/93ad2042-2e83-421e-9776-0a66831583ce.png",
+      afterImg: "/lovable-uploads/326ee1ad-0478-425b-a3ea-5bbc94c629cd.png",
+      results: "Complete Body Recomposition",
+      timeframe: "8 months",
+      testimonial: "Life-changing experience! Not just physical transformation but mental strength too.",
     }
   ];
 
   return (
-    <section className="seamless-section soft-blush">
-      <div className="max-w-7xl mx-auto section-padding">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl lg:text-5xl font-dm-sans font-light text-soft-gray mb-6 leading-tight">
+    <section className="seamless-section soft-blush relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+        style={{
+          backgroundImage: `url('/lovable-uploads/326ee1ad-0478-425b-a3ea-5bbc94c629cd.png')`,
+        }}
+      ></div>
+      
+      <div className="max-w-7xl mx-auto section-padding relative z-10">
+        <div className="text-center mb-20 animate-fade-in">
+          <h2 className="text-4xl lg:text-6xl font-dm-sans font-bold text-soft-gray mb-6 leading-tight">
             Real Transformations
           </h2>
           <p className="text-lg text-muted-gray font-inter font-light max-w-2xl mx-auto">
@@ -39,67 +77,67 @@ const TransformationsSection = () => {
           </p>
         </div>
 
-        {/* Featured Transformation - No containers, seamless flow */}
+        {/* Featured Transformation */}
         <div className="mb-20">
           <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             {/* Before/After Images */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="relative">
+              <div className="relative group">
                 <img 
                   src={transformations[activeTransformation].beforeImg}
                   alt={`${transformations[activeTransformation].name} before transformation`}
-                  className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                  className="w-full h-80 object-cover rounded-2xl shadow-xl transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-red-400 text-white px-3 py-1 rounded-full text-sm font-dm-sans font-medium">BEFORE</span>
+                  <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-dm-sans font-bold shadow-lg">BEFORE</span>
                 </div>
               </div>
-              <div className="relative">
+              <div className="relative group">
                 <img 
                   src={transformations[activeTransformation].afterImg}
                   alt={`${transformations[activeTransformation].name} after transformation`}
-                  className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                  className="w-full h-80 object-cover rounded-2xl shadow-xl transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute bottom-4 right-4">
-                  <span className="bg-green-400 text-white px-3 py-1 rounded-full text-sm font-dm-sans font-medium">AFTER</span>
+                  <span className="bg-mint-500 text-white px-3 py-1 rounded-full text-sm font-dm-sans font-bold shadow-lg">AFTER</span>
                 </div>
               </div>
             </div>
 
-            {/* Transformation Details - No boxes, natural flow */}
-            <div className="space-y-6">
+            {/* Transformation Details */}
+            <div className="space-y-6 animate-fade-in">
               <div>
-                <h3 className="text-2xl font-dm-sans font-medium text-soft-gray mb-2">
+                <h3 className="text-3xl font-dm-sans font-bold text-soft-gray mb-2">
                   {transformations[activeTransformation].name}
                 </h3>
-                <p className="text-muted-gray font-inter">
+                <p className="text-muted-gray font-inter font-medium">
                   {transformations[activeTransformation].age} years • {transformations[activeTransformation].location}
                 </p>
               </div>
 
               <div className="space-y-4">
-                <div className="text-lg font-dm-sans font-medium text-soft-gray">
+                <div className="text-xl font-dm-sans font-bold text-coral-500">
                   {transformations[activeTransformation].results}
                 </div>
-                <div className="text-muted-gray font-inter">
+                <div className="text-muted-gray font-inter font-medium">
                   Timeline: {transformations[activeTransformation].timeframe}
                 </div>
               </div>
 
-              <blockquote className="text-lg italic text-muted-gray font-inter font-light border-l-4 border-gray-300 pl-6">
+              <blockquote className="text-lg italic text-muted-gray font-inter font-light border-l-4 border-coral-400 pl-6 bg-white/50 p-4 rounded-r-lg shadow-md">
                 "{transformations[activeTransformation].testimonial}"
               </blockquote>
             </div>
           </div>
         </div>
 
-        {/* Transformation Gallery - Simple, no containers */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {/* Transformation Gallery */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-6xl mx-auto">
           {transformations.map((transformation, index) => (
             <div 
               key={index}
-              className={`cursor-pointer transition-all duration-300 hover-lift ${
-                activeTransformation === index ? 'opacity-100' : 'opacity-60'
+              className={`cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-white rounded-2xl p-4 shadow-xl ${
+                activeTransformation === index ? 'ring-4 ring-coral-400 shadow-2xl' : 'hover:shadow-xl'
               }`}
               onClick={() => setActiveTransformation(index)}
             >
@@ -107,17 +145,17 @@ const TransformationsSection = () => {
                 <img 
                   src={transformation.beforeImg}
                   alt={`${transformation.name} before`}
-                  className="w-full h-24 object-cover rounded-lg"
+                  className="w-full h-20 object-cover rounded-lg"
                 />
                 <img 
                   src={transformation.afterImg}
                   alt={`${transformation.name} after`}
-                  className="w-full h-24 object-cover rounded-lg"
+                  className="w-full h-20 object-cover rounded-lg"
                 />
               </div>
               <div className="text-center">
-                <h4 className="font-dm-sans font-medium text-soft-gray mb-1">{transformation.name}</h4>
-                <p className="text-sm text-muted-gray font-inter">{transformation.results}</p>
+                <h4 className="font-dm-sans font-bold text-soft-gray mb-1">{transformation.name}</h4>
+                <p className="text-sm text-muted-gray font-inter font-medium">{transformation.results}</p>
               </div>
             </div>
           ))}
