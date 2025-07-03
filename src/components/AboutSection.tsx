@@ -132,56 +132,126 @@ const AboutSection = () => {
                   </div>
                 </div>
 
-                {/* Content Card */}
-                <div className={`flex items-center ${isLeft ? 'justify-start' : 'justify-end'}`}>
-                  <div className={`w-full max-w-md ${isLeft ? 'pr-16' : 'pl-16'}`}>
-                    <div className={`transform transition-all duration-1000 ${
-                      isActive 
-                        ? 'translate-y-0 opacity-100' 
-                        : 'translate-y-8 opacity-50'
-                    }`}>
-                      {/* Year Badge */}
-                      <div className={`inline-block px-4 py-2 rounded-full text-sm font-bold text-white bg-gradient-to-r ${stage.color} mb-4`}>
-                        {stage.year}
-                      </div>
-
-                      {/* Image Container */}
-                      <div className="relative group mb-6">
-                        <div className="overflow-hidden rounded-2xl shadow-2xl">
-                          <img 
-                            src={stage.image}
-                            alt={`Abhiram's transformation - ${stage.title}`}
-                            className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Content Layout - Image and Text on opposite sides */}
+                <div className="grid grid-cols-2 gap-16 items-center">
+                  {/* Left Side */}
+                  <div className={`${isLeft ? 'flex justify-end' : 'flex justify-start'}`}>
+                    {isLeft ? (
+                      // Image on left for odd stages (2019, 2024)
+                      <div className={`w-full max-w-md transform transition-all duration-1000 ${
+                        isActive 
+                          ? 'translate-y-0 opacity-100' 
+                          : 'translate-y-8 opacity-50'
+                      }`}>
+                        {/* Year Badge */}
+                        <div className={`inline-block px-4 py-2 rounded-full text-sm font-bold text-white bg-gradient-to-r ${stage.color} mb-4`}>
+                          {stage.year}
                         </div>
-                        
-                        {/* Floating Title */}
-                        <div className="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg">
-                          <span className="text-2xl font-bold text-gray-800">
-                            {String(index + 1).padStart(2, '0')}
-                          </span>
+
+                        {/* Image Container */}
+                        <div className="relative group mb-6">
+                          <div className="overflow-hidden rounded-2xl shadow-2xl">
+                            <img 
+                              src={stage.image}
+                              alt={`Abhiram's transformation - ${stage.title}`}
+                              className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                          </div>
+                          
+                          {/* Floating Number */}
+                          <div className="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg">
+                            <span className="text-2xl font-bold text-gray-800">
+                              {String(index + 1).padStart(2, '0')}
+                            </span>
+                          </div>
                         </div>
                       </div>
-
-                      {/* Content */}
-                      <h3 className="text-3xl font-dm-sans font-bold text-gray-800 mb-2">
-                        {stage.title}
-                      </h3>
-                      <h4 className="text-lg font-inter text-gray-600 mb-3">
-                        {stage.subtitle}
-                      </h4>
-                      <p className="text-sm text-gray-500 mb-4">
-                        {stage.description}
-                      </p>
-
-                      {/* Motivational Quote */}
-                      <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-4 rounded-lg border-l-4 border-purple-400">
-                        <p className="text-sm italic text-gray-700 font-inter">
-                          "{stage.motivationalText}"
+                    ) : (
+                      // Content on left for even stages (2021)
+                      <div className={`w-full max-w-md transform transition-all duration-1000 ${
+                        isActive 
+                          ? 'translate-y-0 opacity-100' 
+                          : 'translate-y-8 opacity-50'
+                      }`}>
+                        <h3 className="text-3xl font-dm-sans font-bold text-gray-800 mb-2">
+                          {stage.title}
+                        </h3>
+                        <h4 className="text-lg font-inter text-gray-600 mb-3">
+                          {stage.subtitle}
+                        </h4>
+                        <p className="text-sm text-gray-500 mb-4">
+                          {stage.description}
                         </p>
+
+                        {/* Motivational Quote */}
+                        <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-4 rounded-lg border-l-4 border-purple-400">
+                          <p className="text-sm italic text-gray-700 font-inter">
+                            "{stage.motivationalText}"
+                          </p>
+                        </div>
                       </div>
-                    </div>
+                    )}
+                  </div>
+
+                  {/* Right Side */}
+                  <div className={`${isLeft ? 'flex justify-start' : 'flex justify-end'}`}>
+                    {isLeft ? (
+                      // Content on right for odd stages (2019, 2024)
+                      <div className={`w-full max-w-md transform transition-all duration-1000 ${
+                        isActive 
+                          ? 'translate-y-0 opacity-100' 
+                          : 'translate-y-8 opacity-50'
+                      }`}>
+                        <h3 className="text-3xl font-dm-sans font-bold text-gray-800 mb-2">
+                          {stage.title}
+                        </h3>
+                        <h4 className="text-lg font-inter text-gray-600 mb-3">
+                          {stage.subtitle}
+                        </h4>
+                        <p className="text-sm text-gray-500 mb-4">
+                          {stage.description}
+                        </p>
+
+                        {/* Motivational Quote */}
+                        <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-4 rounded-lg border-l-4 border-purple-400">
+                          <p className="text-sm italic text-gray-700 font-inter">
+                            "{stage.motivationalText}"
+                          </p>
+                        </div>
+                      </div>
+                    ) : (
+                      // Image on right for even stages (2021)
+                      <div className={`w-full max-w-md transform transition-all duration-1000 ${
+                        isActive 
+                          ? 'translate-y-0 opacity-100' 
+                          : 'translate-y-8 opacity-50'
+                      }`}>
+                        {/* Year Badge */}
+                        <div className={`inline-block px-4 py-2 rounded-full text-sm font-bold text-white bg-gradient-to-r ${stage.color} mb-4`}>
+                          {stage.year}
+                        </div>
+
+                        {/* Image Container */}
+                        <div className="relative group mb-6">
+                          <div className="overflow-hidden rounded-2xl shadow-2xl">
+                            <img 
+                              src={stage.image}
+                              alt={`Abhiram's transformation - ${stage.title}`}
+                              className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                          </div>
+                          
+                          {/* Floating Number */}
+                          <div className="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg">
+                            <span className="text-2xl font-bold text-gray-800">
+                              {String(index + 1).padStart(2, '0')}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
