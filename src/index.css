@@ -1,71 +1,71 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
-/* Soft pastel color palette and typography system */
+/* Updated color palette based on user's image */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 10% 35%;
+    --background: 46 30% 95%;
+    --foreground: 120 15% 25%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 10% 35%;
+    --card: 46 30% 95%;
+    --card-foreground: 120 15% 25%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 10% 35%;
+    --popover: 46 30% 95%;
+    --popover-foreground: 120 15% 25%;
 
-    --primary: 220 10% 35%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 95 35% 45%;
+    --primary-foreground: 46 30% 95%;
 
-    --secondary: 240 10% 96%;
-    --secondary-foreground: 220 10% 35%;
+    --secondary: 45 25% 85%;
+    --secondary-foreground: 120 15% 25%;
 
-    --muted: 240 5% 96%;
-    --muted-foreground: 220 8% 45%;
+    --muted: 45 25% 85%;
+    --muted-foreground: 120 15% 35%;
 
-    --accent: 240 5% 96%;
-    --accent-foreground: 220 10% 35%;
+    --accent: 95 35% 45%;
+    --accent-foreground: 46 30% 95%;
 
     --destructive: 0 70% 50%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 46 30% 95%;
 
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 220 10% 35%;
+    --border: 45 20% 80%;
+    --input: 45 20% 80%;
+    --ring: 95 35% 45%;
 
     --radius: 0.5rem;
 
-    /* Soft pastel colors */
-    --lavender: 250 60% 85%;
-    --blush: 340 50% 88%;
-    --sage: 120 25% 80%;
-    --peach: 20 60% 85%;
-    --sky: 200 60% 85%;
+    /* Custom color palette from user's image */
+    --cream: 46 30% 95%;
+    --beige: 45 25% 85%;
+    --light-green: 95 35% 65%;
+    --dark-green: 95 35% 45%;
   }
 
   .dark {
-    --background: 220 15% 8%;
-    --foreground: 220 10% 85%;
-    --card: 220 15% 8%;
-    --card-foreground: 220 10% 85%;
-    --popover: 220 15% 8%;
-    --popover-foreground: 220 10% 85%;
-    --primary: 220 10% 85%;
-    --primary-foreground: 220 15% 8%;
-    --secondary: 220 12% 15%;
-    --secondary-foreground: 220 10% 85%;
-    --muted: 220 12% 15%;
-    --muted-foreground: 220 8% 65%;
-    --accent: 220 12% 15%;
-    --accent-foreground: 220 10% 85%;
+    --background: 120 15% 8%;
+    --foreground: 46 30% 85%;
+    --card: 120 15% 8%;
+    --card-foreground: 46 30% 85%;
+    --popover: 120 15% 8%;
+    --popover-foreground: 46 30% 85%;
+    --primary: 95 35% 65%;
+    --primary-foreground: 120 15% 8%;
+    --secondary: 120 12% 15%;
+    --secondary-foreground: 46 30% 85%;
+    --muted: 120 12% 15%;
+    --muted-foreground: 45 25% 65%;
+    --accent: 120 12% 15%;
+    --accent-foreground: 46 30% 85%;
     --destructive: 0 70% 50%;
-    --destructive-foreground: 220 10% 85%;
-    --border: 220 12% 20%;
-    --input: 220 12% 20%;
-    --ring: 220 10% 85%;
+    --destructive-foreground: 46 30% 85%;
+    --border: 120 12% 20%;
+    --input: 120 12% 20%;
+    --ring: 95 35% 65%;
   }
 }
 
@@ -75,46 +75,51 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
-    color: hsl(220, 10%, 35%);
+    @apply bg-background text-foreground font-poppins;
+    color: hsl(120, 15%, 25%);
+    background-color: hsl(46, 30%, 95%);
   }
 
-  .font-inter {
-    font-family: 'Inter', sans-serif;
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
   }
 
-  .font-dm-sans {
-    font-family: 'DM Sans', sans-serif;
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
   }
 }
 
 @layer components {
-  .soft-lavender {
-    background-color: hsl(250, 60%, 95%);
+  .cream-bg {
+    background-color: hsl(46, 30%, 95%);
   }
 
-  .soft-blush {
-    background-color: hsl(340, 50%, 96%);
+  .beige-bg {
+    background-color: hsl(45, 25%, 85%);
   }
 
-  .soft-sage {
-    background-color: hsl(120, 25%, 95%);
+  .light-green-bg {
+    background-color: hsl(95, 35%, 65%);
   }
 
-  .soft-peach {
-    background-color: hsl(20, 60%, 95%);
+  .dark-green-bg {
+    background-color: hsl(95, 35%, 45%);
   }
 
-  .soft-sky {
-    background-color: hsl(200, 60%, 95%);
+  .text-dark-green {
+    color: hsl(95, 35%, 45%);
   }
 
-  .text-soft-gray {
-    color: hsl(220, 10%, 35%);
+  .text-light-green {
+    color: hsl(95, 35%, 65%);
   }
 
-  .text-muted-gray {
-    color: hsl(220, 8%, 45%);
+  .text-contrast {
+    color: hsl(120, 15%, 25%);
+  }
+
+  .text-contrast-light {
+    color: hsl(120, 15%, 35%);
   }
 
   .seamless-section {
@@ -141,16 +146,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(240, 5%, 96%);
+  background: hsl(45, 25%, 85%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(220, 8%, 65%);
+  background: hsl(95, 35%, 45%);
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(220, 10%, 45%);
+  background: hsl(95, 35%, 35%);
 }
 
 /* Infinite sliding animation */

@@ -63,28 +63,48 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom fitness brand colors
-				'coral': {
-					50: '#fef7f3',
-					100: '#fdeee6',
-					400: '#fb8b5e',
-					500: '#f97316',
-					600: '#ea580c',
+				// Custom palette colors
+				'cream': {
+					DEFAULT: 'hsl(46, 30%, 95%)',
+					50: 'hsl(46, 30%, 98%)',
+					100: 'hsl(46, 30%, 95%)',
+					200: 'hsl(46, 30%, 90%)',
 				},
-				'mint': {
-					50: '#f0fdf9',
-					100: '#dcfce7',
-					400: '#4ade80',
-					500: '#22c55e',
-					600: '#16a34a',
+				'beige': {
+					DEFAULT: 'hsl(45, 25%, 85%)',
+					50: 'hsl(45, 25%, 95%)',
+					100: 'hsl(45, 25%, 90%)',
+					200: 'hsl(45, 25%, 85%)',
+					300: 'hsl(45, 25%, 80%)',
 				},
-				'lavender': {
-					50: '#faf7ff',
-					100: '#f3edff',
-					400: '#a855f7',
-					500: '#9333ea',
-					600: '#7c3aed',
+				'sage': {
+					DEFAULT: 'hsl(95, 35%, 65%)',
+					50: 'hsl(95, 35%, 95%)',
+					100: 'hsl(95, 35%, 90%)',
+					200: 'hsl(95, 35%, 80%)',
+					300: 'hsl(95, 35%, 70%)',
+					400: 'hsl(95, 35%, 65%)',
+					500: 'hsl(95, 35%, 55%)',
+					600: 'hsl(95, 35%, 45%)',
+					700: 'hsl(95, 35%, 35%)',
+				},
+				'forest': {
+					DEFAULT: 'hsl(95, 35%, 45%)',
+					50: 'hsl(95, 35%, 90%)',
+					100: 'hsl(95, 35%, 80%)',
+					200: 'hsl(95, 35%, 70%)',
+					300: 'hsl(95, 35%, 60%)',
+					400: 'hsl(95, 35%, 50%)',
+					500: 'hsl(95, 35%, 45%)',
+					600: 'hsl(95, 35%, 40%)',
+					700: 'hsl(95, 35%, 35%)',
+					800: 'hsl(95, 35%, 25%)',
+					900: 'hsl(95, 35%, 15%)',
 				}
+			},
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif'],
+				'playfair': ['Playfair Display', 'serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
