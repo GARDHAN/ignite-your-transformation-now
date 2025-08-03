@@ -8,17 +8,17 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-cream to-beige">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <Navbar />
       
-      {/* Background Image with overlay matching new palette */}
+      {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('/lovable-uploads/326ee1ad-0478-425b-a3ea-5bbc94c629cd.png')`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-sage-50/80 to-forest-100/70"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* Content */}
@@ -26,18 +26,18 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen pt-16">
           {/* Left side - Coach info and CTA */}
           <div className="animate-fade-in">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold mb-4 text-forest-800 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-dm-sans font-bold mb-4 text-white animate-fade-in" style={{ animationDelay: '0.2s' }}>
               with Abhiram Nair
             </h2>
             
-            <p className="text-lg text-forest-700 font-poppins font-light mb-8 max-w-xl animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <p className="text-lg text-white/90 font-inter font-light mb-8 max-w-xl animate-fade-in" style={{ animationDelay: '0.4s' }}>
               Your trusted online fitness transformation coach helping you achieve your best physique with personalized guidance and proven results
             </p>
             
             <Button 
               onClick={scrollToForm}
               size="lg"
-              className="bg-forest-600 hover:bg-forest-700 text-cream font-poppins font-semibold px-12 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105 shadow-2xl border-2 border-forest-500 animate-fade-in"
+              className="bg-coral-500 hover:bg-coral-600 text-white font-dm-sans font-bold px-12 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105 shadow-2xl border-2 border-coral-400 animate-fade-in"
               style={{ animationDelay: '0.6s' }}
             >
               Start Your Journey
@@ -46,7 +46,7 @@ const HeroSection = () => {
 
           {/* Right side - Brand name */}
           <div className="text-center lg:text-right">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-playfair font-bold text-forest-800 tracking-tight animate-fade-in">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-dm-sans font-bold text-white tracking-tight animate-fade-in">
               themight
             </h1>
           </div>
